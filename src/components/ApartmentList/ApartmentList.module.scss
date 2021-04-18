@@ -8,3 +8,18 @@
   padding: 0;
   list-style: none;
 }
+
+@media (max-width: 1200px) {
+  .ApartmentList {
+    display: flex;
+    flex-wrap: wrap;
+    grid-column-gap: 0px;
+  }
+}
+
+@media (max-width: 767px) {
+  .ApartmentList {
+    flex-direction: column;
+    align-content: center;
+  }
+}

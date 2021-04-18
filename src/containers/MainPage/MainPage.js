@@ -2,9 +2,11 @@ import WrapperLayout from '../../hocs/WrapperLayout';
 
 const mainPage = props => {
   return (
+  <section>
     <WrapperLayout>
-      <p>Main Page</p>
+      <h2>Главная</h2>
     </WrapperLayout>
+  </section>
   );
 };
 

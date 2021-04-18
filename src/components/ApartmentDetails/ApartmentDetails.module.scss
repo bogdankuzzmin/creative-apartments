@@ -1,8 +1,6 @@
 .ApartmentDetails {
   margin-top: 20px;
   margin-bottom: 20px;
-
-  
 }
 
 .Row {
@@ -16,7 +14,7 @@
 }
 
 .Photo {
-  width: 500px;
+  max-width: 500px;
   height: auto;
 
   img {
@@ -25,6 +23,7 @@
 }
 
 .ColumnRight {
+
 }
 
 .ApartmentInfo {
@@ -45,4 +44,32 @@
 .Description {
   text-align: justify;
   line-height: 1.4;
+}
+
+@media (max-width: 1200px) {
+  .ColumnLeft {
+    flex-basis: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  .Row {
+    flex-direction: column;
+  }
+
+  .ColumnLeft {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    margin-right: 0;
+  }
+
+  .ApartmentInfo {
+    min-height: 200px;
+  }
+
+  .Photo {
+    margin-bottom: 20px;
+    max-width: 100%;
+  }
 }

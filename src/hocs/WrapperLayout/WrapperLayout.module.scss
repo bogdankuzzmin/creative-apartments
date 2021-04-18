@@ -1,5 +1,17 @@
 .WrapperLayout {
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 20px;
   width: 1200px;
+}
+
+@media (max-width: 1200px) {
+  .WrapperLayout {
+    width: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .WrapperLayout {
+    padding: 0 15px;
+  }
 }
