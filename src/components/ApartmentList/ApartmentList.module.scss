@@ -1,0 +1,10 @@
+.ApartmentList {
+  display: grid;
+  grid-template-columns: 350px 350px 350px;
+  grid-column-gap: 60px;
+  grid-row-gap: 30px;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
