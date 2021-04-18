@@ -1,14 +1,14 @@
 const NavigationLinks = {
   HOME: {
-    link: 'home',
+    link: '/',
     name: 'Главная',
   },
   RENT: {
-    link: 'rent',
+    link: '/rent',
     name: 'Аренда',
   },
   CONTACTS: {
-    link: 'contacts',
+    link: '/contacts',
     name: 'Контакты',
   },
 };
