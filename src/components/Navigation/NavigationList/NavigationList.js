@@ -12,7 +12,7 @@ const navigationItems = props => {
     
     return (
       <NavigationItem 
-        link={`/${itemList.link}`} 
+        link={itemList.link} 
         key={item + index}>
           {itemList.name}
       </NavigationItem>
