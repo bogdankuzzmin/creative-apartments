@@ -1,0 +1,48 @@
+.ApartmentDetails {
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  
+}
+
+.Row {
+  display: flex;
+
+  margin-bottom: 20px;
+}
+
+.ColumnLeft {
+  margin-right: 20px;
+}
+
+.Photo {
+  width: 500px;
+  height: auto;
+
+  img {
+    display: block;
+  }
+}
+
+.ColumnRight {
+}
+
+.ApartmentInfo {
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+
+  a {
+    margin-top: auto;
+  }
+
+  div {
+    margin-bottom: 10px;
+  }
+}
+
+.Description {
+  text-align: justify;
+  line-height: 1.4;
+}
