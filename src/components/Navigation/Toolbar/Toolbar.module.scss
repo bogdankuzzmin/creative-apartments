@@ -1,0 +1,14 @@
+.Toolbar {
+  display: flex;
+
+  border-bottom: 2px solid crimson;
+}
+
+.Nav {
+  display: flex;
+  align-items: center;
+
+  justify-content: space-between;
+  width: 100%;
+  min-height: 70px;
+}
