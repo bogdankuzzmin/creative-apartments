@@ -1,15 +1,13 @@
 .ApartmentItem {
+  position: relative;
   margin-right: 20px;
-
   width: 350px;
 
   background-color: #ffffff;
 
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  
-  transform: translateY(100%);
   transition: box-shadow 0.2s ease-out;
-  animation: appearFromTheButtom 1s forwards;
+  animation: fadeAnimation 0.2s;
   
   &:hover {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
@@ -36,25 +34,49 @@
   
   img {
     display: block;
-    transition: transform 0.1s ease-in-out;
+    transition: transform 0.4s ease-in-out;
+  }
+}
+
+.LikeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 20;
+
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+
+  svg {
+    transition: transform 0.2s;
+  }
+
+  svg:hover {
+    transform: scale(1.1);
+  }
+}
+
+.LikeActive {
+  svg path {
+    fill: #0277BD;
   }
 }
 
 .Title {
-  margin-bottom: 15px;
+  margin-top: 0;
+
   color: #2574b1;
+  font-weight: 700;
   text-decoration: none;
   text-align: center;
-}
 
-@keyframes appearFromTheButtom {
-  from {
-    opacity: 0;
-  }
+  transition: color 0.2s ease-in-out;
 
-  to {
-    transform: translateY(0);
-    opacity: 1;
+  &:hover,
+  &:focus {
+    color: darken(#2574b1, 20%);
   }
 }
 
@@ -64,5 +86,15 @@
     margin-bottom: 10px;
 
     width: 100%;
+  }
+}
+
+@keyframes fadeAnimation {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }
