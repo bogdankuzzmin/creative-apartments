@@ -26,10 +26,24 @@ export const fetchApartments = () => {
     dispatch(fetchApartmentsStart());
     axios.get('/response.json')
       .then((response) => {
-        dispatch(fetchApartmentsSuccess(response.data));
+        const data = response.data.map(item => {
+          return {
+            ...item,
+            isLiked: JSON.parse(localStorage.getItem('like@' + item.id)),
+          };
+        });
+
+        dispatch(fetchApartmentsSuccess(data));
       })
       .catch((error) =>{
         dispatch(fetchApartmentsFail(error));
       });
+  };
+};
+
+export const updateApartment = (updatedApartment) => {
+  return {
+    type: ActionType.UPDATE_APARTMENT,
+    payload: updatedApartment,
   };
 };
