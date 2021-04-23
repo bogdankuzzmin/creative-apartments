@@ -21,7 +21,7 @@ const store = createStore(apartmentStore, composeEnhancers(
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <BrowserRouter>
+      <BrowserRouter basename="/projects/apartments">
         <App />
       </BrowserRouter>
     </Provider>
