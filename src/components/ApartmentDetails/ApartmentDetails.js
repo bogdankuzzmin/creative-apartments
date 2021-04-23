@@ -2,6 +2,7 @@ import {useEffect, useCallback} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 
 import classes from './ApartmentDetails.module.scss';
+import photo from '../../assets/images/photo.jpg';
 
 import {fetchApartments} from '../../store/actions/apartment';
 
@@ -57,7 +58,7 @@ const ApartmentDetails = props => {
         <div className={classes.Row}>
           <div className={classes.ColumnLeft}>
             <div className={classes.Photo}>
-              <img src="https://q-xx.bstatic.com/images/hotel/max1024x768/197/197179243.jpg" alt={title} />
+              <img src={photo} alt={title} />
             </div>
           </div>
           <div className={classes.ColumnRight}>

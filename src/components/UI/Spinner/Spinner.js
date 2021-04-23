@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {ReactComponent as SpinnerSvg} from '../../../assets/spinner.svg';
+import {ReactComponent as SpinnerSvg} from '../../../assets/icons/spinner.svg';
 
 const spinner = () => {
   return (

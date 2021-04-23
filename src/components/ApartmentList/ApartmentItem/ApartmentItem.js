@@ -3,7 +3,8 @@ import {useDispatch} from 'react-redux';
 import {Link, useLocation} from 'react-router-dom';
 
 import classes from './ApartmentItem.module.scss';
-import {ReactComponent as LikeIcon} from '../../../assets/like.svg';
+import photo from '../../../assets/images/photo.jpg';
+import {ReactComponent as LikeIcon} from '../../../assets/icons/like.svg';
 
 import {updateApartment} from '../../../store/actions/apartment';
 
@@ -14,8 +15,6 @@ const ApartmentItem = props => {
   const dispatch = useDispatch();
 
   const updateAp = (updatedApartment) => dispatch(updateApartment(updatedApartment));
-
-  const [likeCounter, setLikeCounter] = useState(0);
 
   const classLikeButton = [classes.LikeButton];
 
@@ -37,7 +36,7 @@ const ApartmentItem = props => {
   return (
     <li className={classes.ApartmentItem}>
       <div className={classes.Photo}>
-        <img src="https://q-xx.bstatic.com/images/hotel/max1024x768/197/197179243.jpg" />
+        <img src={photo} alt={apartment.attributes.title} />
       </div>
       <button className={classLikeButton.join(' ')} onClick={likeClickHandler}>
         <LikeIcon width="25" />
