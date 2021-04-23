@@ -1,31 +1,52 @@
+import {useState} from 'react';
+import {useDispatch} from 'react-redux';
+import {Link, useLocation} from 'react-router-dom';
+
 import classes from './ApartmentItem.module.scss';
-import photo from '../../../assets/images/photo.jpg';
+import {ReactComponent as LikeIcon} from '../../../assets/like.svg';
 
-const apartmentItem = props => {
+import {updateApartment} from '../../../store/actions/apartment';
+
+const ApartmentItem = props => {
+  const {pathname} = useLocation();
   const {apartment} = props;
-  const {
-    area, rooms, title, unit, address: {
-      city, house, room, street
-    }} = apartment.attributes;
 
-  const {
-    type: relationshipType, 
-    attributes: {
-      first_name: firstName, 
-      last_name: lastName, 
-      middle_name: middleName
-    }} = apartment.relationships;
+  const dispatch = useDispatch();
 
-  console.log(apartment);
+  const updateAp = (updatedApartment) => dispatch(updateApartment(updatedApartment));
+
+  const [likeCounter, setLikeCounter] = useState(0);
+
+  const classLikeButton = [classes.LikeButton];
+
+  if (apartment.isLiked) {
+    classLikeButton.push(classes.LikeActive);
+  }
+
+  const likeClickHandler = () => {
+    localStorage.setItem('like@' + apartment.id, !apartment.isLiked);
+
+    const updatedApartment = {
+      ...apartment,
+      isLiked: !apartment.isLiked,
+    };
+
+    updateAp(updatedApartment);
+  };
 
   return (
     <li className={classes.ApartmentItem}>
       <div className={classes.Photo}>
-        <img src={photo} />
+        <img src="https://q-xx.bstatic.com/images/hotel/max1024x768/197/197179243.jpg" />
       </div>
-      <p className={classes.Title}>{apartment.attributes.title}</p>
+      <button className={classLikeButton.join(' ')} onClick={likeClickHandler}>
+        <LikeIcon width="25" />
+      </button>
+      <Link to={`${pathname}/${apartment.id}`}>
+        <p className={classes.Title}>{apartment.attributes.title}</p>
+      </Link>
     </li>
   );
 };
 
-export default apartmentItem;
+export default ApartmentItem;

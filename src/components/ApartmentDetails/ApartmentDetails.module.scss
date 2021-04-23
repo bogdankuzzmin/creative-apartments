@@ -22,10 +22,6 @@
   }
 }
 
-.ColumnRight {
-
-}
-
 .ApartmentInfo {
   display: flex;
   flex-direction: column;
@@ -61,6 +57,7 @@
     flex-basis: 100%;
     display: flex;
     justify-content: center;
+    
     margin-right: 0;
   }
 

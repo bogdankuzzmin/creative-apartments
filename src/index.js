@@ -6,7 +6,6 @@ import {createStore, applyMiddleware, compose} from 'redux';
 import thunk from 'redux-thunk';
 
 import './index.scss';
-
 import apartmentStore from './store/reducers/apartment';
 
 import App from './App';

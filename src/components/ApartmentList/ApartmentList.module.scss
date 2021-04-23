@@ -13,6 +13,7 @@
   .ApartmentList {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     grid-column-gap: 0px;
   }
 }

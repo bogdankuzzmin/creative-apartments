@@ -80,6 +80,12 @@
   }
 }
 
+@media (max-width: 1130px) {
+  .ApartmentItem {
+    width: 300px;
+  }
+}
+
 @media (max-width: 767px) {
   .ApartmentItem {
     margin-right: 0;

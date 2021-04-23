@@ -1,5 +1,6 @@
-import {ActionType} from './actionTypes';
 import axios from '../../axios-apartments';
+
+import {ActionType} from './actionTypes';
 
 export const fetchApartmentsStart = () => {
   return {
