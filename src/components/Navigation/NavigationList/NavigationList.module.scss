@@ -3,7 +3,13 @@
 
   margin: 0;
   padding: 20px 0;
-  min-width: 300px;
 
   list-style: none;
+}
+
+@media (max-width: 767px) {
+  .NavigationList {
+    flex-direction: column;
+    padding: 0;
+  }
 }

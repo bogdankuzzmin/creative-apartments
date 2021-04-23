@@ -1,11 +1,11 @@
 .Toolbar {
+  padding-top: 1px;
+  min-height: 60px;
   border-bottom: 2px solid #dc143c;
 }
 
-.Nav {
-  display: flex;
-  align-items: center;
-
-  justify-content: space-between;
-  width: 100%;
+@media (max-width: 767px) {
+  .Toolbar nav {
+    display: none;
+  }
 }
